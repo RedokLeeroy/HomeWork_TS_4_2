@@ -7,6 +7,10 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "@types/css-modules": "^1.0.2",
+    "@types/node": "^18.7.23",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "axios": "^0.27.2",
     "prop-types": "^15.8.1",
     "props-type": "^1.0.1",
@@ -15,6 +19,7 @@
     "react-loader-spinner": "^5.1.7-beta.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.7",
+    "typescript": "^4.8.4",
     "web-vitals": "^2.1.3"
   },
   "scripts": {
@@ -22,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{ts,tsx}"
   },
   "eslintConfig": {
     "extends": [

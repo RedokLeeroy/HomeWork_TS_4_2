@@ -1,15 +1,15 @@
-import { useState} from "react";
-import { toast } from 'react-toastify';
+import React, {useState} from "react";
+import { toast, ToastContent } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import s from "./SearchBar.module.css"
 
 
 
-export const SearchBar = ({onSubmit}) => { 
+export const SearchBar = ({onSubmit}: {onSubmit: (arg: string) => void}): JSX.Element => { 
     
 const [value, setValue] = useState("")
     
-    const handleSubmit = (event) => {
+    const handleSubmit = (event : React.MouseEvent<HTMLFormElement>): ToastContent<string> => {
         event.preventDefault()
         if (value.trim() !== "") {
                 onSubmit(value)
@@ -18,8 +18,8 @@ const [value, setValue] = useState("")
         return toast.error("You're request is empty")}
     }
 
-   const handleChange = (event) => {
-        const {value} = event.target
+   const handleChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
+        const {value} = event.target as EventTarget & {value: string}
         return setValue(value)}
     
     
